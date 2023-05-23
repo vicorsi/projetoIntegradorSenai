@@ -269,9 +269,10 @@ article h3 {
 	padding-left: 100px;
 }
 .parent {
+	margin: 100px;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 5px;
 	grid-row-gap: 10px;
 	}
@@ -286,5 +287,10 @@ article h3 {
 	.div8 { grid-area: 2 / 3 / 3 / 4; }
 	.div9 { grid-area: 2 / 4 / 3 / 5; }
 	.div10 { grid-area: 2 / 5 / 3 / 6; }
-	.div11 { grid-area: 2 / 4 / 3 / 6; }
-	.div12 { grid-area: 1 / 5 / 3 / 6; }
+	.div11 { grid-area: 2 / 5 / 3 / 6; }
+	.div12 { grid-area: 2 / 5 / 3 / 6; }
+	.div13 { grid-area: 1 / 5 / 3 / 6; }
+
+.parent button {
+	color: green;
+}
