@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Santos Store - Loja Não Oficial</title>
+    <title>Santos Store - Carrinho de Compras</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,45 +37,52 @@
             </div>
         </div>
     </header>
+
+    <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <div id="cart-items">
+            <p id="empty-cart-message">Seu carrinho está vazio.</p>
+        </div>
+        <button id="clear-cart-button">Limpar Carrinho</button>
+    </div>
+
     <footer>
         <div class="container">
             <div id="contact">
-                <h3>Precisa de ajuda?</h3>
+                <h3>No Santos, todo sócio é Rei</h3>
                 <br>
-                <p>Nos informe seu problema para tentarmos te ajudar!</p>
-                <br>
-                <h3>Qual o seu nome:</h3>
-                <form action="">
-                    <input type="text">
-                </form>
-                <h3>Qual o seu sobrenome: </h3>
-                <form action="" method="get">
-                    <input type="text" name="sobrenome" id="">
-                </form>
-                <h3>Qual o tipo do seu problema: </h3>
-                <form action="">
-                    <p>Produtoㅤㅤ</p>
-                    <input type="checkbox" name="problema" id="1">
-                    <p>ㅤㅤEntregaㅤㅤ</p>
-                    <input type="checkbox" name="problema" id="2">
-                    <p>ㅤㅤCompraㅤㅤ</p>
-                    <input type="checkbox" name="problema" id="3">
-                    <p>ㅤㅤOutrosㅤㅤ</p>
-                    <input type="checkbox" name="problema" id="4">
-                </form>
-                <h3><input type="submit" value="Enviar"></h3>
-                <br>
-                <h4>Assim que possível entraremos em contato...</h4>
+                Loja não oficial do Santos Futebol Clube.</p>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
-        // Função para adicionar item ao carrinho
-        function adicionarAoCarrinho() {
-            alert("Item adicionado ao carrinho!");
-            // Aqui você pode adicionar o código para manipular os itens do carrinho, como adicionar ao local storage, enviar para o servidor, etc.
-        }
+        window.addEventListener("DOMContentLoaded", function() {
+            var cartItemsContainer = document.getElementById("cart-items");
+            var emptyCartMessage = document.getElementById("empty-cart-message");
+            
+            var cart = localStorage.getItem("cart");
+            if (cart) {
+                cart = JSON.parse(cart);
+                if (cart.length > 0) {
+                    emptyCartMessage.style.display = "none";
+                    for (var i = 0; i < cart.length; i++) {
+                        var item = cart[i];
+                        var itemElement = document.createElement("p");
+                        itemElement.textContent = item.name + " - R$" + item.price;
+                        cartItemsContainer.appendChild(itemElement);
+                    }
+                }
+            }
+        });
+
+        var clearCartButton = document.getElementById("clear-cart-button");
+        clearCartButton.addEventListener("click", function() {
+            localStorage.removeItem("cart");
+            cartItemsContainer.innerHTML = "";
+            emptyCartMessage.style.display = "block";
+        });
     </script>
 </body>
 </html>

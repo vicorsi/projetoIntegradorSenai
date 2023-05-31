@@ -11,113 +11,159 @@
 <body>
     <header>
         <div class="container">
-			<div id="logo">
-				<img src="images/logo.PNG" alt="SANTOS BUY">
-			</div>
-			<nav>
-				<ul>
-					<li><a href="index.html">Início</a></li>
-					<li><a href="masculinos.html">Masculinos</a></li>
-					<li><a href="femininos.html">Femininos</a></li>
-					<li><a href="peixinhos.html">Peixinhos</a></li>
+            <div id="logo">
+                <img src="images/logo.PNG" alt="SANTOS BUY">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="masculinos.html">Masculinos</a></li>
+                    <li><a href="femininos.html">Femininos</a></li>
+                    <li><a href="peixinhos.html">Peixinhos</a></li>
                     <li><a href="sobrenos.html">Sobre Nós</a></li>
                     <li><a href="ajuda.html">Ajuda</a></li>
-				</ul>
-			</nav>
-			<div id="search">
-				<form action="#" method="get">
-					<input type="text" name="search" placeholder="Pesquisar...">
-					<button type="submit">Pesquisar</button>
-				</form>
-			</div>
-			<div id="carrinho">
-				<img src="images/fast-cart.png" alt="">
-			</div>
-			</div>
-		</div>
+                </ul>
+            </nav>
+            <div id="search">
+                <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Pesquisar...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <div id="carrinho">
+                <a href="carrinho.html">
+                    <img src="images/fast-cart.png" alt="">
+                </a>
+            </div>
+        </div>
     </header>
-	<article>
-		<div id="masculinos">
-			<p>Coleção Infantil</p>
-		</div>
-		<br><br>
-	</article>
-	<div class="parent">
-		<div class="div1"> <img src="images/inf1.jpg" width="auto" height="400px" alt="">
-			<h3>Kit Clube Umbro OF 2 2022</h3>
-			<p>
-				R$ 249,99
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div2"> <img src="images/inf2.jpg" width="auto" height="400px" alt="">
-			<h3>Camisa Outubro Rosa 2022</h3>
-			<p>
-				R$ 239,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div3"> <img src="images/inf 3.jpg" width="auto" height="400px" alt="">
-			<h3>Favorite Casaco</h3>
-			<p>
-				R$ 189,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div4"> <img src="images/inf4.png" width="auto" height="400px" alt="">
-			<h3>Kit Clube Umbro 22/23</h3>
-			<p>
-				R$ 299,99
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div5"> <img src="images/inf5.png" width="auto" height="400px" alt="">
-			<h3>Camiseta Torcida</h3>
-			<p>
-				R$ 59,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-	</div>
+    <article>
+        <div id="masculinos">
+            <p>Coleção Infantil</p>
+        </div>
+        <br><br>
+    </article>
+    <div class="parent">
+        <div class="div1">
+            <img src="images/inf1.jpg" width="auto" height="400px" alt="">
+            <h3>Kit Clube Umbro OF 2 2022</h3>
+            <p>
+                R$ 249,99
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item12)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div2">
+            <img src="images/inf2.jpg" width="auto" height="400px" alt="">
+            <h3>Camisa Outubro Rosa 2022</h3>
+            <p>
+                R$ 239,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item13)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div3">
+            <img src="images/inf 3.jpg" width="auto" height="400px" alt="">
+            <h3>Favorite Casaco</h3>
+            <p>
+                R$ 189,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item14)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div4">
+            <img src="images/inf4.png" width="auto" height="400px" alt="">
+            <h3>Kit Clube Umbro 22/23</h3>
+            <p>
+                R$ 299,99
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item15)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div5">
+            <img src="images/inf5.png" width="auto" height="400px" alt="">
+            <h3>Camiseta Torcida</h3>
+            <p>
+                R$ 59,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item16)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+    </div>
     <section id="pagamento">
-		<div class="container">
-			<h2>Métodos de pagamento:</h2>
-			<img src="images/formas de pagamento.PNG" alt="">
-		</div>
-	</section>
+        <div class="container">
+            <h2>Métodos de pagamento:</h2>
+            <img src="images/formas de pagamento.PNG" alt="">
+        </div>
+    </section>
     <footer>
-		<div class="container">
-			<div id="contact">
-				<h3>No Santos, todo sócio é Rei</h3>
-				<br>
-				Loja não oficial do Santos Futebol Clube.</p>
-			</div>
-		</div>
-	</footer>
+        <div class="container">
+            <div id="contact">
+                <h3>No Santos, todo sócio é Rei</h3>
+                <br>
+                Loja não oficial do Santos Futebol Clube.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function addItemToCart(item) {
+            var cart = localStorage.getItem("cart");
+            if (!cart) {
+                cart = [];
+            } else {
+                cart = JSON.parse(cart);
+            }
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Item adicionado ao carrinho!");
+        }
+
+        var item12 = {
+            name: "Kit Clube Umbro OF 2 2022",
+            price: 249.99
+        };
+
+        var item13 = {
+            name: "Camisa Outubro Rosa 2022",
+            price: 239.90
+        };
+
+        var item14 = {
+            name: "Favorite Casaco",
+            price: 189.90
+        };
+
+        var item15 = {
+            name: "Kit Clube Umbro 22/23",
+            price: 299.99
+        };
+
+        var item16 = {
+            name: "Camiseta Torcida",
+            price: 59.90
+        };
+    </script>
 </body>
 </html>

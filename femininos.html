@@ -11,88 +11,123 @@
 <body>
     <header>
         <div class="container">
-			<div id="logo">
-				<img src="images/logo.PNG" alt="SANTOS BUY">
-			</div>
-			<nav>
-				<ul>
-					<li><a href="index.html">Início</a></li>
-					<li><a href="masculinos.html">Masculinos</a></li>
-					<li><a href="femininos.html">Femininos</a></li>
-					<li><a href="peixinhos.html">Peixinhos</a></li>
+            <div id="logo">
+                <img src="images/logo.PNG" alt="SANTOS BUY">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="masculinos.html">Masculinos</a></li>
+                    <li><a href="femininos.html">Femininos</a></li>
+                    <li><a href="peixinhos.html">Peixinhos</a></li>
                     <li><a href="sobrenos.html">Sobre Nós</a></li>
                     <li><a href="ajuda.html">Ajuda</a></li>
-				</ul>
-			</nav>
-			<div id="search">
-				<form action="#" method="get">
-					<input type="text" name="search" placeholder="Pesquisar...">
-					<button type="submit">Pesquisar</button>
-				</form>
-			</div>
-			<div id="carrinho">
-				<img src="images/fast-cart.png" alt="">
-			</div>
+                </ul>
+            </nav>
+            <div id="search">
+                <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Pesquisar...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <div id="carrinho">
+                <a href="carrinho.html">
+                    <img src="images/fast-cart.png" alt="">
+                </a>
+            </div>
         </div>
     </header>
-	<article>
-		<div id="masculinos">
-			<p>Coleção feminina</p>
-		</div>
-		<br><br>
-	</article>
-	<div class="parent">
-		<div class="div2"> <img src="images/tshirt6.jpg" width="auto" height="400px" alt="">
-			<h3>Camisa Charlie Brown Jr</h3>
-			<p>
-				R$ 149,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div3"> <img src="images/tshirt11.jpg" width="auto" height="400px" alt="">
-			<h3>Camisa umbro Santos OF 2 2023 Torcedora</h3>
-			<p>
-				R$ 299,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-		<div class="div4"> <img src="images/tshirt12.jpg" width="auto" height="400px" alt="">
-			<h3>Camisa umbro Santos OF 2 2023 Atleta</h3>
-			<p>
-				R$ 399,90
-			</p>
-			<br>
-			<p>
-				<button>
-					Adicionar ao carrinho
-				</button>
-			</p>
-		</div>
-	</div>
+    <article>
+        <div id="masculinos">
+            <p>Coleção feminina</p>
+        </div>
+        <br><br>
+    </article>
+    <div class="parent">
+        <div class="div2">
+            <img src="images/tshirt6.jpg" width="auto" height="400px" alt="">
+            <h3>Camisa Charlie Brown Jr</h3>
+            <p>
+                R$ 149,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item9)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div3">
+            <img src="images/tshirt11.jpg" width="auto" height="400px" alt="">
+            <h3>Camisa umbro Santos OF 2 2023 Torcedora</h3>
+            <p>
+                R$ 299,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item10)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+        <div class="div4">
+            <img src="images/tshirt12.jpg" width="auto" height="400px" alt="">
+            <h3>Camisa umbro Santos OF 2 2023 Atleta</h3>
+            <p>
+                R$ 399,90
+            </p>
+            <br>
+            <p>
+                <button onclick="addItemToCart(item11)">
+                    Adicionar ao carrinho
+                </button>
+            </p>
+        </div>
+    </div>
     <section id="pagamento">
-		<div class="container">
-			<h2>Métodos de pagamento:</h2>
-			<img src="images/formas de pagamento.PNG" alt="">
-		</div>
-	</section>
+        <div class="container">
+            <h2>Métodos de pagamento:</h2>
+            <img src="images/formas de pagamento.PNG" alt="">
+        </div>
+    </section>
     <footer>
-		<div class="container">
-			<div id="contact">
-				<h3>No Santos, todo sócio é Rei</h3>
-				<br>
-				Loja não oficial do Santos Futebol Clube.</p>
-			</div>
-		</div>
-	</footer>
+        <div class="container">
+            <div id="contact">
+                <h3>No Santos, todo sócio é Rei</h3>
+                <br>
+                Loja não oficial do Santos Futebol Clube.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function addItemToCart(item) {
+            var cart = localStorage.getItem("cart");
+            if (!cart) {
+                cart = [];
+            } else {
+                cart = JSON.parse(cart);
+            }
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Item adicionado ao carrinho!");
+        }
+
+        var item9 = {
+            name: "Camisa Charlie Brown Jr",
+            price: 149.90
+        };
+
+        var item10 = {
+            name: "Camisa umbro Santos OF 2 2023 Torcedora",
+            price: 299.90
+        };
+
+        var item11 = {
+            name: "Camisa umbro Santos OF 2 2023 Atleta",
+            price: 399.90
+        };
+    </script>
 </body>
 </html>
