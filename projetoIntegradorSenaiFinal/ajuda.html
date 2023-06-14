@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Santos Store - Loja Não Oficial</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="images/logo.PNG" alt="SANTOS BUY">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="masculinos.html">Masculinos</a></li>
+                    <li><a href="femininos.html">Femininos</a></li>
+                    <li><a href="peixinhos.html">Peixinhos</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Pesquisar...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <div id="carrinho">
+                <a href="carrinho.html">
+                    <img src="images/fast-cart.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container">
+            <div id="contact">
+                <h3>Precisa de ajuda?</h3>
+                <br>
+                <p>Nos informe seu problema para tentarmos te ajudar!</p>
+                <br>
+                <h3>Qual o seu nome:</h3>
+                <form action="">
+                    <input type="text">
+                </form>
+                <h3>Qual o seu sobrenome: </h3>
+                <form action="" method="get">
+                    <input type="text" name="sobrenome" id="">
+                </form>
+                <h3>Qual o tipo do seu problema: </h3>
+                <form action="">
+                    <p>Produtoㅤㅤ</p>
+                    <input type="checkbox" name="problema" id="1">
+                    <p>ㅤㅤEntregaㅤㅤ</p>
+                    <input type="checkbox" name="problema" id="2">
+                    <p>ㅤㅤCompraㅤㅤ</p>
+                    <input type="checkbox" name="problema" id="3">
+                    <p>ㅤㅤOutrosㅤㅤ</p>
+                    <input type="checkbox" name="problema" id="4">
+                </form>
+                <h3><input type="submit" value="Enviar"></h3>
+                <br>
+                <h4>Assim que possível entraremos em contato...</h4>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Função para adicionar item ao carrinho
+        function adicionarAoCarrinho() {
+            alert("Item adicionado ao carrinho!");
+            // Aqui você pode adicionar o código para manipular os itens do carrinho, como adicionar ao local storage, enviar para o servidor, etc.
+        }
+    </script>
+</body>
+</html>

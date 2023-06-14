@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Santos Store - Loja Não Oficial</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="images/logo.PNG" alt="SANTOS BUY">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="masculinos.html">Masculinos</a></li>
+                    <li><a href="femininos.html">Femininos</a></li>
+                    <li><a href="peixinhos.html">Peixinhos</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Pesquisar...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <div id="carrinho">
+                <img id="cart-image" src="images/fast-cart.png" alt="">
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container">
+            <div id="contact">
+                <h3>O que é a Santos Store?</h3>
+                <br>
+                <p>Esta é uma Loja não oficial do Santos Futebol Clube.</p>
+                <br>
+                <p>O Santos Futebol Clube, mais conhecido como Santos, é um clube poliesportivo brasileiro, com sede em Santos, é considerado o maior clube da história do futebol mundial.</p>
+                <br>
+                <p>Este site é apenas um Projeto Integrador de disciplinas, realizado no primeiro semestre do curso de Desenvolvimentos de Sistemas no Senai Roberto Mange.</p>
+                <br>
+                <h3>Confira como é realmente a Santos Store.</h3>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/sFLhtn4BT80" title="REINAUGURAÇÃO | SANTOS STORE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("cart-image").addEventListener("click", function() {
+            window.location.href = "carrinho.html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Santos Store - Carrinho de Compras</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="images/logo.PNG" alt="SANTOS BUY">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="masculinos.html">Masculinos</a></li>
+                    <li><a href="femininos.html">Femininos</a></li>
+                    <li><a href="peixinhos.html">Peixinhos</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Pesquisar...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <div id="carrinho">
+                <a href="carrinho.html">
+                    <div class="logo">
+                        <img src="images/fast-cart.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <div id="cart-items">
+            <p id="empty-cart-message">Seu carrinho está vazio.</p>
+        </div>
+        <button id="clear-cart-button">Limpar Carrinho</button>
+        <button id="checkout-button" ><a href="checkout.html">Finalizar Compra</a></button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div id="contact">
+                <h3>No Santos, todo sócio é Rei</h3>
+                <br>
+                Loja não oficial do Santos Futebol Clube.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var cartItemsContainer = document.getElementById("cart-items");
+            var emptyCartMessage = document.getElementById("empty-cart-message");
+            
+            var cart = localStorage.getItem("cart");
+            if (cart) {
+                cart = JSON.parse(cart);
+                if (cart.length > 0) {
+                    emptyCartMessage.style.display = "none";
+                    for (var i = 0; i < cart.length; i++) {
+                        var item = cart[i];
+                        var itemElement = document.createElement("p");
+                        itemElement.textContent = item.name + " - R$" + item.price;
+                        cartItemsContainer.appendChild(itemElement);
+                    }
+                }
+            }
+        });
+
+        var clearCartButton = document.getElementById("clear-cart-button");
+        clearCartButton.addEventListener("click", function() {
+            localStorage.removeItem("cart");
+            cartItemsContainer.innerHTML = "";
+            emptyCartMessage.style.display = "block";
+        });
+
+        var checkoutButton = document.getElementById("checkout-button");
+        checkoutButton.addEventListener("click", function() {
+            alert("Compra finalizada com sucesso!");
+        })
+
+    </script>
+</body>
+</html>

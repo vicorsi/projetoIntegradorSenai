@@ -1,0 +1,386 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #fff;	
+	color: #000000;
+	padding: 20px;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+#logo {
+	width: 100px;
+	justify-content: left;
+}
+
+.container {
+	background: #ffffff;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+#search {
+	display: flex;
+}
+
+#search input[type="text"] {
+	padding: 10px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+}
+
+#search button {
+	background-color: #000000;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+#carrinho img {
+	height: 35px;
+	cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    flex: 0 0 19%; 
+    padding: 10px;
+    text-align: center;
+	cursor: pointer;
+  }
+  
+  .carousel-item img {
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .carousel-item p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  
+
+
+#daily-deals {
+	background-color: #f8f8f8;
+	padding: 50px 0;
+}
+
+.deal-card {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	text-align: center;
+	margin: 20px;
+}
+
+.deal-card h4 {
+	color: #ff8c00;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.deal-card p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.deal-card button {
+	background-color: #ff8c00;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.deal-card button:hover {
+	background-color: #ffa500;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+form input[type="email"] {
+	padding: 10px;
+	border-radius: 5px 0 0 5px;
+	border: none;
+	flex-grow: 1;
+}
+
+form button[type="submit"] {
+	background-color: #000000;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+	background-color: #1f1f1f;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 25px 0;
+}
+
+footer .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #333;
+	color: #fff;
+}
+
+#pagamento{
+	background: #fff;
+	color: #000000;
+	margin: 30px;
+}
+
+footer h3 {			
+	margin-bottom: 20px;
+}
+
+#map {
+	flex-basis: 100%;
+	height: 300px;
+	margin-top: 20px;
+}
+
+#masculinos {
+	font-weight: bold;
+	font-size: 23px;
+}
+article {
+	font-size: 20px;
+	display: grid;
+	margin: 20px;
+}
+article p {
+	padding-left: 100px;
+	font-size: 25px;
+}
+article h3 {
+	padding-left: 100px;
+}
+.parent {
+	margin: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 10px;
+	}
+	
+
+
+button {
+	--green: #33ff00;
+	font-size: 12px;
+	padding: 0.7em 2.7em;
+	letter-spacing: 0.06em;
+	position: relative;
+	font-family: inherit;
+	border-radius: 0.6em;
+	overflow: hidden;
+	transition: all 0.3s;
+	line-height: 1.4em;
+	border: 2px solid var(--green);
+	background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+	color: var(--green);
+	box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+	}
+	  
+button:hover {
+	color: #000000;
+	box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+	}
+	  
+button:before {
+	content: "";
+	position: absolute;
+	left: -4em;
+	width: 4em;
+	height: 100%;
+	top: 0;
+	transition: transform .4s ease-in-out;
+	background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+	}
+	  
+button:hover:before {
+	transform: translateX(15em);
+	}
+    @media screen and (max-width: 840px) {
+		.carousel-container {
+		  width: calc(100% - 40px);
+		}
+		nav ul {
+			list-style: none;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+		
+		nav ul li {
+			margin-right: 5px;
+			
+		}
+		.camisas{
+			width: 90%;
+			height: auto;
+		}
+		#pagamentos{
+			width: 100%;
+			height: auto;
+		}
+		#contact{
+			left:50px;
+		}
+		h2{
+			font-size: 1rem;
+		}
+	
+		#search{
+			width: 20%;
+		}
+		#search button {
+		
+			padding: 5px;
+		
+		}
+		.parent{
+			grid-template-columns: 1fr 1fr ;
+			grid-template-rows: 1fr;
+			grid-column-gap: 5px;
+			grid-row-gap: 10px;
+		}
+		#logo {
+			width: 10%;
+		}
+		
+		nav ul li a {
+			color: #000000;
+			text-decoration: none;
+			font-size: 10px;
+			font-weight: bold;
+			
+		}
+		
+		.carousel-item {
+		  width: calc(100% / 2);
+		}
+		
+		.carousel-item:last-child {
+		  margin-right: 20px;
+		}
+	  }
+	  
+	  @media screen and (max-width: 480px) {
+		.carousel-container {
+		  width: 100%;
+		}
+	
+		
+		.carousel-item {
+		  width: 100%;
+		  margin-right: 0;
+		}
+		.parent{
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+	
+		}
+	  }
+	@media screen and (max-width:380px) {
+	
+		.parent{
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+	
+		}
+	}
